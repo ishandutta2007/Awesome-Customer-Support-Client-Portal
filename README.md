@@ -1,6 +1,6 @@
 # Awesome-Customer-Support-Client-Portal
 
-# Top Customer Support & Client Portal Ecosystem
+## Top Customer Support & Client Portal Ecosystem
 
 **Curated List of SaaS Products & Open-Source GitHub Projects**  
 *Focused on Self-Service Help Centers, Ticket Submission & Branded Client Workspaces*  
