@@ -64,7 +64,7 @@ Below is a curated comparison of leading hosted customer support and client port
 
 Below is a comprehensive collection of self-hosted, open-source customer support software, ticket management systems, client portals, and knowledge bases—sorted in descending order by GitHub stargazer count.
 
-| Project | Stars | Primary Focus | Stack | Description |
+| Project | GitHub_Stars | Primary Focus | Stack | Description |
 | :--- | :---: | :--- | :--- | :--- |
 | **[Chatwoot](https://github.com/chatwoot/chatwoot)** | [![Stars](https://img.shields.io/github/stars/chatwoot/chatwoot?style=social&color=white)](https://github.com/chatwoot/chatwoot/stargazers) | Omnichannel Support & Live Chat | Ruby on Rails, Vue | Open-source customer engagement suite and alternative to Intercom/Zendesk. Features omnichannel shared inbox (email, website chat, WhatsApp, Facebook, Telegram), live chat widget, help center, and client portal. |
 | **[UVdesk](https://github.com/uvdesk/community-skeleton)** | [![Stars](https://img.shields.io/github/stars/uvdesk/community-skeleton?style=social&color=white)](https://github.com/uvdesk/community-skeleton/stargazers) | Helpdesk & Ticket Portal | PHP, Symfony | Enterprise-grade, modular open-source ticketing system. Offers a comprehensive customer self-service portal, ticket conversion from emails, knowledge base management, and custom workflow automations. |
@@ -90,7 +90,7 @@ Contributions are warmly welcomed! 🌟 To suggest a new open-source project or 
 
 1. 🍴 **Fork** this repository.
 2. 🌿 Create a new feature branch (`git checkout -b feature/suggested-tool`).
-3. 📝 Update `README.md` following the established table structure (include product name, link, star badge if open source, pricing, and specific limits).
+3. 📝 Update `README.md` following the established table structure (include product name, link, Stars_Badge if open source, pricing, and specific limits).
 4. 🚀 Commit your improvements (`git commit -m "feat: add NewToolName"`).
 5. 📤 Push your branch (`git push origin feature/suggested-tool`).
 6. 🎯 Open a **Pull Request** detailing why the tool should be included.
