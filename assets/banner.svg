@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#0b1120" />
+    </linearGradient>
+
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <linearGradient id="glowGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#0ea5e9" stop-opacity="0" />
+    </linearGradient>
+
+    <linearGradient id="glowGrad2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ec4899" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0" />
+    </linearGradient>
+
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.75" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.85" />
+    </linearGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="gridPattern" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#334155" stroke-width="0.7" stroke-opacity="0.25" />
+      <circle cx="40" cy="40" r="1" fill="#64748b" fill-opacity="0.3" />
+    </pattern>
+
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.4" />
+    </filter>
+
+    <filter id="pillGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="0" stdDeviation="5" flood-color="#38bdf8" flood-opacity="0.5" />
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes pulseOrb {
+      0%, 100% { transform: scale(1) translate(0px, 0px); opacity: 0.25; }
+      50% { transform: scale(1.15) translate(25px, -15px); opacity: 0.45; }
+    }
+    @keyframes pulseOrb2 {
+      0%, 100% { transform: scale(1) translate(0px, 0px); opacity: 0.2; }
+      50% { transform: scale(1.2) translate(-30px, 20px); opacity: 0.35; }
+    }
+    @keyframes floatPill1 {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-7px); }
+    }
+    @keyframes floatPill2 {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(6px); }
+    }
+    @keyframes radarSweep {
+      0% { stroke-dashoffset: 200; }
+      100% { stroke-dashoffset: 0; }
+    }
+    .orb1 { animation: pulseOrb 9s ease-in-out infinite; transform-origin: 20% 30%; }
+    .orb2 { animation: pulseOrb2 11s ease-in-out infinite; transform-origin: 80% 70%; }
+    .pill-float-1 { animation: floatPill1 4s ease-in-out infinite; }
+    .pill-float-2 { animation: floatPill2 4.8s ease-in-out infinite; }
+    .flow-line { stroke-dasharray: 6 4; animation: radarSweep 25s linear infinite; }
+  </style>
+
+  <!-- Background Base -->
+  <rect width="1200" height="420" rx="16" fill="url(#bgGrad)" />
+
+  <!-- Animated Glowing Background Orbs (Behind everything) -->
+  <g class="orb1">
+    <circle cx="220" cy="120" r="280" fill="url(#glowGrad1)" />
+  </g>
+  <g class="orb2">
+    <circle cx="980" cy="300" r="260" fill="url(#glowGrad2)" />
+  </g>
+
+  <!-- Subtle Blueprint Grid -->
+  <rect width="1200" height="420" rx="16" fill="url(#gridPattern)" />
+
+  <!-- Dynamic Animated Flow Elements in Background -->
+  <g stroke="#38bdf8" stroke-opacity="0.3" stroke-width="1.5" fill="none" class="flow-line">
+    <path d="M 100 80 Q 300 20 600 70 T 1100 40" />
+    <path d="M 50 360 Q 350 400 650 350 T 1150 380" />
+  </g>
+
+  <!-- Interactive Decorative Floating Badges/Pills (Lower Layer, Flanking Center) -->
+  <g class="pill-float-1" transform="translate(70, 48)">
+    <rect width="170" height="34" rx="17" fill="#1e293b" fill-opacity="0.75" stroke="#38bdf8" stroke-width="1.2" stroke-opacity="0.6" filter="url(#pillGlow)" />
+    <circle cx="18" cy="17" r="5" fill="#38bdf8" />
+    <text x="32" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#e2e8f0">🎧 Helpdesk Portals</text>
+  </g>
+
+  <g class="pill-float-2" transform="translate(970, 52)">
+    <rect width="160" height="34" rx="17" fill="#1e293b" fill-opacity="0.75" stroke="#818cf8" stroke-width="1.2" stroke-opacity="0.6" />
+    <circle cx="18" cy="17" r="5" fill="#818cf8" />
+    <text x="32" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#e2e8f0">📂 Client Workspaces</text>
+  </g>
+
+  <g class="pill-float-2" transform="translate(60, 340)">
+    <rect width="175" height="34" rx="17" fill="#1e293b" fill-opacity="0.75" stroke="#c084fc" stroke-width="1.2" stroke-opacity="0.6" />
+    <circle cx="18" cy="17" r="5" fill="#c084fc" />
+    <text x="32" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#e2e8f0">📖 Self-Service KB</text>
+  </g>
+
+  <g class="pill-float-1" transform="translate(965, 335)">
+    <rect width="175" height="34" rx="17" fill="#1e293b" fill-opacity="0.75" stroke="#34d399" stroke-width="1.2" stroke-opacity="0.6" />
+    <circle cx="18" cy="17" r="5" fill="#34d399" />
+    <text x="32" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#e2e8f0">🚀 100% Open Source</text>
+  </g>
+
+  <!-- Central Foreground Content Card (Solid High-Contrast Protection) -->
+  <g transform="translate(180, 85)" filter="url(#cardShadow)">
+    <rect width="840" height="250" rx="20" fill="url(#cardGrad)" stroke="#475569" stroke-width="1.2" stroke-opacity="0.5" />
+
+    <!-- Category Pill Badge -->
+    <rect x="290" y="22" width="260" height="28" rx="14" fill="#0369a1" fill-opacity="0.35" stroke="#38bdf8" stroke-width="1" />
+    <text x="420" y="41" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#38bdf8" letter-spacing="1.5" text-anchor="middle">CURATED AWESOME ECOSYSTEM</text>
+
+    <!-- Main Title (Strictly Foreground) -->
+    <text x="420" y="102" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="37" font-weight="800" fill="url(#textGrad)" text-anchor="middle" letter-spacing="-0.5">
+      Customer Support &amp; Client Portals
+    </text>
+
+    <!-- Subtitle (Clear, readable, high contrast) -->
+    <text x="420" y="142" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="17" font-weight="500" fill="#cbd5e1" text-anchor="middle">
+      Self-Service Help Centers, Ticket Management &amp; Branded Workspaces
+    </text>
+
+    <!-- Divider Line -->
+    <line x1="220" y1="168" x2="620" y2="168" stroke="#334155" stroke-width="1.2" stroke-opacity="0.8" />
+
+    <!-- Feature Pillars in Foreground -->
+    <g transform="translate(120, 192)">
+      <!-- Pillar 1 -->
+      <g transform="translate(0, 0)">
+        <text x="90" y="15" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#f8fafc" text-anchor="middle">⚡ SaaS Solutions</text>
+        <text x="90" y="33" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">Ranked by Revenue &amp; Valuation</text>
+      </g>
+      <!-- Pillar 2 -->
+      <g transform="translate(210, 0)">
+        <text x="95" y="15" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#f8fafc" text-anchor="middle">🛡️ Open-Source Hubs</text>
+        <text x="95" y="33" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">Ranked by Stargazer Counts</text>
+      </g>
+      <!-- Pillar 3 -->
+      <g transform="translate(420, 0)">
+        <text x="90" y="15" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#f8fafc" text-anchor="middle">📊 Pricing &amp; Limits</text>
+        <text x="90" y="33" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">Transparent Tiers &amp; Quotas</text>
+      </g>
+    </g>
+  </g>
+</svg>
